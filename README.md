@@ -60,7 +60,7 @@ While this is a personal portfolio project, suggestions and feedback are welcome
 
 ## Contact
 
-- **Email**: seqqam.rida@gmail.com
+- **Email**: 
 - **LinkedIn**: [Rida Seqqam](https://www.linkedin.com/in/rida-seqqam)
 - **GitHub**: [@RidaSeqqam](https://github.com/RidaSeqqam)
 

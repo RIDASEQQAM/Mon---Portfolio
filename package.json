@@ -4,7 +4,7 @@
   "private": true,
   "author": {
     "name": "RIDA SEQQAM",
-    "email": "seqqam.rida@gmail.com",
+    "email": "seqqam.rida1@gmail.com",
     "url": "https://github.com/RidaSeqqam"
   },
   "description": "My Portfolio - SEQQAM",
@@ -28,7 +28,7 @@
   "homepage": "https://RidaSeqqam.github.io/portfolio",
   "bugs": {
     "url": "https://github.com/RidaSeqqam/portfolio/issues",
-    "email": "seqqam.rida@gmail.com"
+    "email": "seqqam.rida1@gmail.com"
   },
   "type": "module",
   "scripts": {
@@ -40,7 +40,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "@emailjs/browser": "^4.1.0",
+    "@emailjs/browser": "^4.4.1",
     "@react-three/drei": "^9.99.4",
     "@react-three/fiber": "^8.15.16",
     "clsx": "^2.1.0",

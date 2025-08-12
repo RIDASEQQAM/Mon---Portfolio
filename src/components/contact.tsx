@@ -1,12 +1,17 @@
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
-import { useState, useRef, type FormEvent, type ChangeEvent } from "react";
+import { useState, useRef, type FormEvent, type ChangeEvent, useEffect } from "react";
 import { toast } from "sonner";
 
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
 import { slideIn } from "../utils/motion";
+
+// Initialize EmailJS
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 
 // Contact
 export const Contact = () => {
@@ -17,6 +22,15 @@ export const Contact = () => {
     message: "",
   });
   const [loading, setLoading] = useState(false);
+
+  // Initialize EmailJS
+  useEffect(() => {
+    if (EMAILJS_PUBLIC_KEY) {
+      emailjs.init({
+        publicKey: EMAILJS_PUBLIC_KEY,
+      });
+    }
+  }, []);
 
   // handle form change
   const handleChange = (
@@ -94,16 +108,15 @@ export const Contact = () => {
     // send email
     emailjs
       .send(
-        import.meta.env.VITE_APP_SERVICE_ID,
-        import.meta.env.VITE_APP_TEMPLATE_ID,
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
           to_name: "RIDA",
           from_email: form.email.trim().toLowerCase(),
-          to_email: "seqqam.rida@gmail.com",
+          to_email: "seqqam.rida1@gmail.com",
           message: form.message,
-        },
-        import.meta.env.VITE_APP_EMAILJS_KEY,
+        }
       )
       .then(() => toast.success("Thanks for contacting me."))
       .catch((error) => {

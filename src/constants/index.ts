@@ -25,6 +25,7 @@ import {
   user1,
   linkedin,
   github,
+  dataprotect,
   orange,
   bouygues,
 } from "../assets";
@@ -39,6 +40,16 @@ export const NAV_LINKS = [
   {
     id: "work",
     title: "Experience",
+    link: null,
+  },
+  {
+    id: "projects",
+    title: "Projects",
+    link: null,
+  },
+  {
+    id: "certifications",
+    title: "Certifications",
     link: null,
   },
   {
@@ -162,7 +173,7 @@ export const EXPERIENCES = [
     {
     title: "Stage en Cybersécurité ",
     company_name: "DATAPROTECT",
-    icon: bouygues,
+    icon: dataprotect,
     iconBg: "#fff",
     date: "Juillet 2023 - Aôut 2023",
     points: [
@@ -258,6 +269,28 @@ export const PROJECTS = [
     source_code_link: "https://github.com/RidaSeqqam/e-commerce",
     live_site_link: "",
   }
+] as const;
+
+// Certifications
+export const CERTIFICATIONS = [
+  {
+    name: "Example Certification",
+    issuer: "Example Issuer",
+    date: "2025",
+    description: "Description of the certification and skills acquired",
+    image: project1, // You'll need to replace this with your certificate image
+    certificate_link: "https://example.com/certificate",
+    tags: [
+      {
+        name: "web",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "development",
+        color: "green-text-gradient",
+      }
+    ],
+  },
 ] as const;
 
 export const SOCIALS = [
