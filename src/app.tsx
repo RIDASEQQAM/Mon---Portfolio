@@ -10,6 +10,7 @@ import {
   Tech,
   Works,
   StarsCanvas,
+  Certifications,
 } from "./components";
 import Banner from "./components/banner";
 import Footer from "./components/footer";
@@ -30,6 +31,7 @@ const App = () => {
         <Experience />
         <Tech />
         <Works />
+        <Certifications />
         <Feedbacks />
 
         {/* Contact */}

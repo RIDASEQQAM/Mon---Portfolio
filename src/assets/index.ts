@@ -10,8 +10,9 @@ import menu from "./menu.svg";
 import mobile from "./mobile.png";
 import preview from "./preview.png";
 import web from "./web.png";
-import bouygues from "./bouygues.png";
-import orange from "./orange.png";
+import bouygues from "../assets/company/bouygues.png"; 
+import orange from "../assets/company/orange.png";
+import dataprotect from "../assets/company/dataprotect.svg";
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -48,6 +49,7 @@ export {
   mobile,
   preview,
   web,
+  dataprotect,
   css,
   docker,
   figma,
