@@ -17,11 +17,16 @@ import {
   mongodb,
   git,
   figma,
+  certif2,
+  certif3,
+  certif4,
+  certif5,
   docker,
   threejs,
   project1,
   project2,
   project3,
+  certif1,
   user1,
   linkedin,
   github,
@@ -204,31 +209,31 @@ export const TESTIMONIALS = [
 // Projects
 export const PROJECTS = [
   {
-    name: "Application de Réservation MK Travel",
+    name: "Application de gestion des clients et de suivi des achats",
     description:
-      "Application web complète pour la réservation d'hôtels et de vols, avec interface utilisateur moderne et système de paiement intégré.",
+      "plateforme de gestion client incluant la centralisation des données, le suivi des interactions, la gestion des plaintes et la segmentation pour des campagnes marketing ciblées.",
     tags: [
       {
-        name: "react",
+        name: "Java",
         color: "blue-text-gradient",
       },
       {
-        name: "nodejs",
+        name: "SpringBoot",
         color: "green-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "MySQL",
         color: "pink-text-gradient",
       },
     ],
     image: project1,
-    source_code_link: "https://github.com/RidaSeqqam/mk-travel",
+    source_code_link: "https://github.com/RIDASEQQAM/Platform-de-gestion-des-clients-et-achats.git",
     live_site_link: "",
   },
   {
     name: "Portfolio Personnel",
     description:
-      "Portfolio professionnel développé avec React et Three.js, présentant mes compétences et expériences de manière interactive et moderne.",
+      "Portfolio interactif et moderne développé avec React et Three.js, mettant en valeur mes compétences techniques, mon parcours et mes réalisations à travers une expérience utilisateur immersive.",
     tags: [
       {
         name: "react",
@@ -244,7 +249,7 @@ export const PROJECTS = [
       },
     ],
     image: project2,
-    source_code_link: "https://github.com/RidaSeqqam/portfolio",
+    source_code_link: "https://github.com/RIDASEQQAM/Mon---Portfolio.git",
     live_site_link: "",
   },
   {
@@ -274,23 +279,111 @@ export const PROJECTS = [
 // Certifications
 export const CERTIFICATIONS = [
   {
-    name: "Example Certification",
-    issuer: "Example Issuer",
-    date: "2025",
-    description: "Description of the certification and skills acquired",
-    image: project1, // You'll need to replace this with your certificate image
-    certificate_link: "https://example.com/certificate",
+    name: "Oracle Certified Professional Java SE 17 Developer",
+    issuer: "Oracle",
+    date: "5 December 2024",
+    description: "Maîtrise avancée du langage Java, des API clés et des fonctionnalités modernes de Java SE 17, avec la capacité de concevoir et maintenir des applications robustes, sécurisées et performantes",
+    image: certif1,
+    certificate_link: "https://drive.google.com/file/d/1fmCkh1cDH48pfpmPwGUZO-AuXWptMqUL/view?usp=sharing",
     tags: [
       {
-        name: "web",
+        name: "Java SE 17",
         color: "blue-text-gradient",
       },
       {
-        name: "development",
+        name: "Développement avancé",
         color: "green-text-gradient",
       }
     ],
   },
+  {
+    name: "Building Scalable Java Microservices with Spring Boot and Spring Cloud",
+    issuer: "Google Cloud",
+    date: "13 December 2024",
+    description: "Compétences avancées en développement de microservices Java, incluant la conception d’architectures distribuées, la scalabilité avec Spring Boot et Spring Cloud, ainsi que l’intégration avec des services cloud pour des applications robustes et performantes.",
+    image: certif2,
+    certificate_link: "https://drive.google.com/file/d/1raNUrBpb5JKK4xgpqkzw1dIfWlWiwAB1/view?usp=sharing",
+    tags: [
+      {
+        name: "Spring Boot",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Spring Cloud",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Google Cloud",
+        color: "pink-text-gradient",
+      }
+    ],
+  },
+  {
+    name: "Introduction to Big Data with Spark and Hadoop",
+    issuer: "IBM",
+    date: "13 December 2024",
+    description: "Compétences fondamentales en Big Data, incluant le traitement distribué, l’analyse de données à grande échelle et l’optimisation des performances. Capacité à concevoir et mettre en œuvre des solutions Big Data fiables et évolutives.",
+    image: certif3,
+    certificate_link: "https://drive.google.com/file/d/1kcPDlZi6ExIdotPnOuyb_huEi9Fq5jSv/view?usp=sharing",
+    tags: [
+      {
+        name: "Spark",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Hadoop",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Big Data",
+        color: "pink-text-gradient",
+      }
+    ],
+  },
+  {
+    name: "Certified Kubernetes Application Developer (CKAD)",
+    issuer: "Cloud Native Computing Foundation",
+    date: "10 April 2025",
+    description: "Compétences avancées en développement, déploiement et maintenance d'applications cloud-natives sur Kubernetes, avec une expertise particulière en conteneurisation et orchestration.",
+    image: certif4,
+    certificate_link: "https://www.cncf.io/certification/ckad/",
+    tags: [
+      {
+        name: "Kubernetes",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "DevOps",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Containers",
+        color: "pink-text-gradient",
+      }
+    ],
+  },
+  {
+    name: "Google Professional Machine Learning Engineer",
+    issuer: "Google Cloud",
+    date: "30 May 2025",
+    description: "Expertise en conception, développement et déploiement de solutions d'apprentissage automatique sur Google Cloud Platform, avec focus sur les modèles ML scalables et productifs.",
+    image: certif5,
+    certificate_link: "https://cloud.google.com/certification/machine-learning-engineer",
+    tags: [
+      {
+        name: "Machine Learning",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "GCP",
+        color: "green-text-gradient",
+      },
+      {
+        name: "AI",
+        color: "pink-text-gradient",
+      }
+    ],
+  }
 ] as const;
 
 export const SOCIALS = [

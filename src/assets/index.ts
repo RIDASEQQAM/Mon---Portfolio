@@ -34,6 +34,13 @@ import project3 from "./projects/projet3.png";
 
 import user1 from "./testimonials/user1.jpg";
 
+// Certification images
+import certif1 from "../assets/certifications/certif1.png";
+import certif2 from "../assets/certifications/certif2.png";
+import certif3 from "../assets/certifications/certif3.png";
+import certif4 from "../assets/certifications/certif4.png";
+import certif5 from "../assets/certifications/certif5.png";
+
 import github from "./socials/github.svg";
 import linkedin from "./socials/linkedin.svg";
 
@@ -64,6 +71,11 @@ export {
   typescript,
   threejs,
   project1,
+  certif1,
+  certif2,
+  certif3,
+  certif4,
+  certif5,
   project2,
   project3,
   user1,
