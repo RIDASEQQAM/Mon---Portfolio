@@ -32,11 +32,12 @@
   },
   "type": "module",
   "engines": {
-    "node": "18.x"
+    "node": "18.x",
+    "npm": ">=8.0.0"
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "preview": "vite preview",
     "check-types": "tsc --noEmit",
     "predeploy": "npm run build",
