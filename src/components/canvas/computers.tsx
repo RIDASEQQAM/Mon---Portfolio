@@ -10,8 +10,8 @@ type ComputersProps = {
 
 // Computers
 const Computers = ({ isMobile }: ComputersProps) => {
-  // Import scene
-  const computer = useGLTF("./desktop_pc/scene.gltf");
+  // Import scene with draco compression
+  const computer = useGLTF("./desktop_pc/scene.gltf", true);
 
   return (
     // Mesh
@@ -26,6 +26,7 @@ const Computers = ({ isMobile }: ComputersProps) => {
         intensity={1}
         castShadow
         shadow-mapSize={1024}
+        distance={200}
       />
       <primitive
         object={computer.scene}
@@ -41,11 +42,20 @@ const Computers = ({ isMobile }: ComputersProps) => {
 const ComputersCanvas = () => {
   // state to check mobile
   const [isMobile, setIsMobile] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Preload the 3D model
+  useEffect(() => {
+    const preloadModel = async () => {
+      await useGLTF.preload("./desktop_pc/scene.gltf");
+      setIsLoading(false);
+    };
+    preloadModel();
+  }, []);
 
   // Check if device is Mobile
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 500px)");
-
     setIsMobile(mediaQuery.matches);
 
     // handle screen size change
@@ -64,8 +74,15 @@ const ComputersCanvas = () => {
     <Canvas
       frameloop="demand"
       shadows
+      dpr={[1, 2]} // Optimize pixel ratio
       camera={{ position: [20, 3, 5], fov: 25 }}
-      gl={{ preserveDrawingBuffer: true, alpha: true }}
+      gl={{ 
+        preserveDrawingBuffer: true,
+        alpha: true,
+        antialias: true,
+        powerPreference: "high-performance"
+      }}
+      performance={{ min: 0.5 }} // Allow frame rate to drop to 30fps under load
     >
       {/* Canvas Loader show on fallback */}
       <Suspense fallback={<CanvasLoader />}>
@@ -73,9 +90,10 @@ const ComputersCanvas = () => {
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
+          makeDefault
         />
         {/* Show Model */}
-        <Computers isMobile={isMobile} />
+        {!isLoading && <Computers isMobile={isMobile} />}
       </Suspense>
 
       {/* Preload all */}
