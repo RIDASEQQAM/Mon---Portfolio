@@ -28,22 +28,26 @@ A modern, interactive 3D portfolio website built with React, Three.js, and TypeS
 ## Installation & Setup
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/RIDASEQQAM/Portfolio_Rida_Seqqam.git
 ```
 
 2. Install dependencies:
+
 ```bash
 cd Portfolio_Rida_Seqqam
 npm install
 ```
 
 3. Start the development server:
+
 ```bash
 npm run dev
 ```
 
 4. Build for production:
+
 ```bash
 npm run build
 ```
@@ -55,12 +59,13 @@ Visit the live portfolio at: [Portfolio Website](https://ridaseqqam.github.io/po
 ## 🤝 Contributing
 
 While this is a personal portfolio project, suggestions and feedback are welcome! Feel free to:
+
 - Open issues for suggestions
 - Submit pull requests for improvements
 
 ## Contact
 
-- **Email**: 
+- **Email**: (<seqqam.rida1@gmail.com>)
 - **LinkedIn**: [Rida Seqqam](https://www.linkedin.com/in/rida-seqqam)
 - **GitHub**: [@RidaSeqqam](https://github.com/RidaSeqqam)
 
