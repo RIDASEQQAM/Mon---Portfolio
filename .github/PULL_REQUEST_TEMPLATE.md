@@ -1,8 +1,8 @@
+# Pull Request Template
+
 <!--
 PR description.
 -->
-
----
 
 Please make sure the below checklist is followed for Pull Requests.
 
