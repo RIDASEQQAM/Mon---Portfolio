@@ -11,7 +11,7 @@
   "keywords": [
     "reactjs",
     "react",
-    "porfolio-app",
+    "portfolio-app",
     "three-js",
     "modern-ui/ux",
     "js",
@@ -25,14 +25,13 @@
     "type": "git",
     "url": ""
   },
-  "homepage": "https://RidaSeqqam.github.io/portfolio",
   "bugs": {
     "url": "https://github.com/RidaSeqqam/portfolio/issues",
     "email": "seqqam.rida1@gmail.com"
   },
   "type": "module",
   "engines": {
-    "node": "22.x",
+    "node": "20.x",
     "npm": ">=9.0.0"
   },
   "scripts": {

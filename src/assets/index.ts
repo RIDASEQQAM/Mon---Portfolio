@@ -32,7 +32,7 @@ import project1 from "./projects/project1.png";
 import project2 from "./projects/project2.png";
 import project3 from "./projects/projet3.png";
 
-import user1 from "./testimonials/user1.jpg";
+import user1 from "./testimonials/user1.png";
 
 // Certification images
 import certif1 from "../assets/certifications/certif1.png";
