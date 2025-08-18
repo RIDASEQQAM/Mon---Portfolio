@@ -32,11 +32,7 @@
   },
   "type": "module",
   "engines": {
-<<<<<<< HEAD
     "node": "18.x",
-=======
-    "node": "20.x",
->>>>>>> 3c4e7a34de44f42dbda80d86dbcc34d307f8bcf3
     "npm": ">=9.0.0"
   },
   "scripts": {
@@ -71,11 +67,13 @@
     "@types/react-vertical-timeline-component": "^3.3.6",
     "@types/tailwindcss": "^3.1.0",
     "@vitejs/plugin-react": "^4.0.3",
+    "@vitest/ui": "^3.2.4",
     "autoprefixer": "^10.4.21",
     "gh-pages": "^6.1.1",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.3.3",
-    "vite": "^5.1.4"
+    "vite": "^5.1.4",
+    "vitest": "^3.2.4"
   }
 }

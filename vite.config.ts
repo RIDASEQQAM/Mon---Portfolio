@@ -5,7 +5,6 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   build: {
-<<<<<<< HEAD
     outDir: "dist",
     sourcemap: false,
     commonjsOptions: {
@@ -20,11 +19,14 @@ export default defineConfig({
         }
       }
     }
-  }
-=======
-    commonjsOptions: {
-      transformMixedEsModules: true,
-    },
   },
->>>>>>> 3c4e7a34de44f42dbda80d86dbcc34d307f8bcf3
+  optimizeDeps: {
+    exclude: ['@react-three/fiber', '@react-three/drei']
+  },
+  server: {
+    headers: {
+      'Cross-Origin-Opener-Policy': 'same-origin',
+      'Cross-Origin-Embedder-Policy': 'require-corp'
+    }
+  }
 });
