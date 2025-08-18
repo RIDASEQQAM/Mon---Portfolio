@@ -55,9 +55,9 @@ export const About = () => {
           className="empty-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
           Je suis un Développeur Full Stack Junior passionné par la création d'applications web modernes et performantes.
-          Fort d'une formation solide en développement web et d'une expérience pratique acquise à travers divers projets,
+          Fort d'une formation solide en développement Full Stack et d'une expérience pratique acquise à travers divers projets,
           je maîtrise les technologies front-end et back-end. Je suis constamment à la recherche de nouvelles opportunités
-          pour apprendre et grandir dans le domaine du développement web.
+          pour apprendre et grandir dans le domaine du développement Full Stack.
           entreprise innovante.
 
         </motion.p>
