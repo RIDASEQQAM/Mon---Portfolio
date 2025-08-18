@@ -31,9 +31,12 @@
     "email": "seqqam.rida1@gmail.com"
   },
   "type": "module",
+  "engines": {
+    "node": "18.x"
+  },
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "tsc && vite build",
     "preview": "vite preview",
     "check-types": "tsc --noEmit",
     "predeploy": "npm run build",
@@ -56,6 +59,8 @@
     "three": "^0.161.0"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.6",
+    "@rollup/plugin-node-resolve": "^16.0.1",
     "@types/react": "^18.2.59",
     "@types/react-dom": "^18.2.19",
     "@types/react-vertical-timeline-component": "^3.3.6",
