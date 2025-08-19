@@ -16,22 +16,21 @@ type BallProps = {
 
 // Ball
 const Ball = ({ imgUrl }: BallProps) => {
-  // use texture from drei
   const [decal] = useTexture([imgUrl]);
 
   return (
-    <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
-      {/* Lights */}
+    <Float speed={1.5} rotationIntensity={0.75} floatIntensity={1.5}>
       <ambientLight intensity={0.25} />
-      <directionalLight position={[0, 0, 0.05]} />
-      {/* Mesh */}
-      <mesh castShadow receiveShadow scale={2.75}>
-        <icosahedronGeometry args={[1, 1]} />
+      <directionalLight position={[0, 0, 0.05]} intensity={0.5} />
+      <mesh castShadow receiveShadow scale={2.5}>
+        <icosahedronGeometry args={[1, 2]} />
         <meshStandardMaterial
-          color="#fff8eb"
+          color="#ffffff"
           polygonOffset
           polygonOffsetFactor={-5}
-          flatShading
+          flatShading={false}
+          roughness={0.3}
+          metalness={0.2}
         />
         <Decal
           position={[0, 0, 1]}
@@ -50,14 +49,33 @@ type BallCanvasProps = {
 // Ball Canvas
 const BallCanvas = ({ icon }: BallCanvasProps) => {
   return (
-    <Canvas frameloop="demand" gl={{ preserveDrawingBuffer: true }}>
-      {/* Show canvas loader on fallback */}
+    <Canvas
+      frameloop="demand"
+      dpr={[1, 2]}
+      gl={{
+        preserveDrawingBuffer: true,
+        antialias: true,
+        alpha: true,
+        powerPreference: "default",
+        depth: true,
+        stencil: false
+      }}
+      camera={{
+        fov: 45,
+        near: 0.1,
+        far: 200,
+        position: [-4, 3, 6]
+      }}
+    >
       <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls enableZoom={false} />
+        <OrbitControls
+          enableZoom={false}
+          enablePan={false}
+          maxPolarAngle={Math.PI / 2}
+          minPolarAngle={Math.PI / 2}
+        />
         <Ball imgUrl={icon} />
       </Suspense>
-
-      {/* Preload all */}
       <Preload all />
     </Canvas>
   );
