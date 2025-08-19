@@ -27,6 +27,13 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import threejs from "./tech/threejs.svg";
 import typescript from "./tech/typescript.png";
+import java from "./tech/java.png";
+import postgres from "./tech/postgres.png";
+import maven from "./tech/maven.png";
+import angular from "./tech/angular.png";
+import azure from "./tech/azure.png";
+import jira from "./tech/jira.png";
+import python from "./tech/python.png";
 
 import project1 from "./projects/project1.png";
 import project2 from "./projects/project2.png";
@@ -71,6 +78,13 @@ export {
   tailwind,
   typescript,
   threejs,
+  java,
+  postgres,
+  maven,
+  angular,
+  azure,
+  jira,
+  python,
   project1,
   certif1,
   certif2,

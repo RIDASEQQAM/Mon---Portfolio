@@ -24,6 +24,13 @@ import {
   certif6,
   docker,
   threejs,
+  java,
+  postgres,
+  maven,
+  angular,
+  azure,
+  jira,
+  python,
   project1,
   project2,
   project3,
@@ -143,6 +150,34 @@ export const TECHNOLOGIES = [
   {
     name: "Docker",
     icon: docker,
+  },
+  {
+    name: "Java",
+    icon: java,
+  },
+  {
+    name: "PostgreSQL",
+    icon: postgres,
+  },
+  {
+    name: "Maven",
+    icon: maven,
+  },
+  {
+    name: "Angular",
+    icon: angular,
+  },
+  {
+    name: "Azure",
+    icon: azure,
+  },
+  {
+    name: "Jira",
+    icon: jira,
+  },
+  {
+    name: "Python",
+    icon: python,
   },
 ] as const;
 
