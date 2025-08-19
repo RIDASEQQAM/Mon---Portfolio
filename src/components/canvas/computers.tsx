@@ -4,6 +4,16 @@ import { Suspense, useEffect, useState, useCallback } from "react";
 import { LoadingScreen } from "../LoadingScreen";
 import * as THREE from 'three';
 
+// Create optimized texture loader
+const textureLoader = new THREE.TextureLoader();
+textureLoader.crossOrigin = 'anonymous';
+
+// Configure loading manager
+const loadingManager = new THREE.LoadingManager();
+loadingManager.onProgress = (url, loaded, total) => {
+  console.log(`Loading file: ${url}.\nLoaded ${loaded} of ${total} files.`);
+};
+
 // Enable Draco decoder
 useGLTF.preload("/desktop_pc/scene.gltf", true);
 
@@ -26,6 +36,20 @@ const Computers = ({ isMobile }: ComputersProps) => {
           child.receiveShadow = true;
           if ((child as THREE.Mesh).material) {
             const material = (child as THREE.Mesh).material as THREE.Material;
+            
+            // Optimize materials
+            if ('map' in material) {
+              const texturedMaterial = material as THREE.MeshStandardMaterial;
+              if (texturedMaterial.map) {
+                // Enable texture compression
+                texturedMaterial.map.generateMipmaps = false;
+                texturedMaterial.map.minFilter = THREE.LinearFilter;
+                texturedMaterial.map.magFilter = THREE.LinearFilter;
+                texturedMaterial.map.anisotropy = 1;
+              }
+            }
+
+            // Enable material optimizations
             material.needsUpdate = true;
           }
         }

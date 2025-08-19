@@ -341,45 +341,45 @@ export const CERTIFICATIONS = [
     ],
   },
   {
-    name: "Certified Kubernetes Application Developer (CKAD)",
-    issuer: "Cloud Native Computing Foundation",
-    date: "10 April 2025",
-    description: "Compétences avancées en développement, déploiement et maintenance d'applications cloud-natives sur Kubernetes, avec une expertise particulière en conteneurisation et orchestration.",
+    name: "React Native",
+    issuer: "Meta",
+    date: "10 Mai 2024",
+    description: "Compétences avancées en développer des compétences pratiques en création d’applications mobiles multiplateformes. J’y ai appris à concevoir des interfaces utilisateur modernes et performantes, à intégrer des API et à gérer l’état des applications. Cette formation atteste de ma capacité à développer des applications mobiles complètes avec React Native, tout en respectant les bonnes pratiques de développement mobile.",
     image: certif4,
-    certificate_link: "https://www.cncf.io/certification/ckad/",
+    certificate_link: "https://drive.google.com/file/d/1vurYZhsfSQkbhnEliKs_oYTtZe03pdv-/view?usp=sharing",
     tags: [
       {
-        name: "Kubernetes",
+        name: "React Native",
         color: "blue-text-gradient",
       },
       {
-        name: "DevOps",
+        name: "Intégration d’API",
         color: "green-text-gradient",
       },
       {
-        name: "Containers",
+        name: "Développement mobile",
         color: "pink-text-gradient",
       }
     ],
   },
   {
-    name: "Google Professional Machine Learning Engineer",
-    issuer: "Google Cloud",
+    name: "Python for Everybody",
+    issuer: "University of Michigan",
     date: "30 May 2025",
-    description: "Expertise en conception, développement et déploiement de solutions d'apprentissage automatique sur Google Cloud Platform, avec focus sur les modèles ML scalables et productifs.",
+    description: "acquérir une solide maîtrise des bases de la programmation en Python, incluant la manipulation des structures de données, l’extraction et le traitement d’informations à partir du web et l’utilisation de bases de données relationnelles. Elle atteste de mes compétences pratiques en développement Python et en analyse de données.",
     image: certif5,
-    certificate_link: "https://cloud.google.com/certification/machine-learning-engineer",
+    certificate_link: "https://drive.google.com/file/d/1pfD8cR-5cOc0dOz69qjHqVRIOUShPQEz/view?usp=sharing",
     tags: [
       {
-        name: "Machine Learning",
+        name: "Python",
         color: "blue-text-gradient",
       },
       {
-        name: "GCP",
+        name: "Structures de données",
         color: "green-text-gradient",
       },
       {
-        name: "AI",
+        name: "SQL",
         color: "pink-text-gradient",
       }
     ],
