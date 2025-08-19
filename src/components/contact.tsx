@@ -26,9 +26,7 @@ export const Contact = () => {
   // Initialize EmailJS
   useEffect(() => {
     if (EMAILJS_PUBLIC_KEY) {
-      emailjs.init({
-        publicKey: EMAILJS_PUBLIC_KEY,
-      });
+      emailjs.init(EMAILJS_PUBLIC_KEY);
     }
   }, []);
 
