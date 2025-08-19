@@ -16,14 +16,14 @@ export const Hero = () => {
       >
         {/* Title */}
         <div className="flex flex-col justify-center items-center mt-5">
-          <div className="w-5 h-5 rounded-full bg-[#915eff]" />
+          <div className="w-5 h-5 rounded-full bg-[#7249ca]" />
           <div className="w-1 sm:h-80 h-40 violet-gradient" />
         </div>
 
         {/* About Me */}
         <div>
           <h1 className={cn(styles.heroHeadText, "text-white")}>
-            Salut, Je suis <span className="text-[#915eff]">Rida</span>
+          <span className="text-[#915eff]">Salut, Je suis Rida</span>
           </h1>
           <p className={cn(styles.heroSubText, "mt-2 text-white-100")}>
           Ingénieur Full Stack  <br className="sm:block hidden" />
