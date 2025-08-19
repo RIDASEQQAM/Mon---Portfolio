@@ -21,6 +21,7 @@ import {
   certif3,
   certif4,
   certif5,
+  certif6,
   docker,
   threejs,
   project1,
@@ -365,7 +366,7 @@ export const CERTIFICATIONS = [
   {
     name: "Python for Everybody",
     issuer: "University of Michigan",
-    date: "30 May 2025",
+    date: "30 Mai 2024",
     description: "acquérir une solide maîtrise des bases de la programmation en Python, incluant la manipulation des structures de données, l’extraction et le traitement d’informations à partir du web et l’utilisation de bases de données relationnelles. Elle atteste de mes compétences pratiques en développement Python et en analyse de données.",
     image: certif5,
     certificate_link: "https://drive.google.com/file/d/1pfD8cR-5cOc0dOz69qjHqVRIOUShPQEz/view?usp=sharing",
@@ -380,6 +381,28 @@ export const CERTIFICATIONS = [
       },
       {
         name: "SQL",
+        color: "pink-text-gradient",
+      }
+    ],
+  },
+  {
+    name: "Software Engineering",
+    issuer: "The University of Hong Kong",
+    date: "15 July 2025",
+    description: "Formation axée sur les méthodologies et outils de développement logiciel à grande échelle : analyse des besoins, conception, implémentation, tests et maintenance. Approche pratique avec études de cas réels, combinant programmation orientée objet et méthodes agiles.",
+    image: certif6,
+    certificate_link: "https://drive.google.com/file/your-new-certificate-link",
+    tags: [
+      {
+        name: "Ingénierie logicielle",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "POO",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Méthodologies agiles",
         color: "pink-text-gradient",
       }
     ],

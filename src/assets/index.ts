@@ -40,6 +40,7 @@ import certif2 from "../assets/certifications/certif2.png";
 import certif3 from "../assets/certifications/certif3.png";
 import certif4 from "../assets/certifications/certif4.png";
 import certif5 from "../assets/certifications/certif5.png";
+import certif6 from "../assets/certifications/certif6.png";
 
 import github from "./socials/github.svg";
 import linkedin from "./socials/linkedin.svg";
@@ -76,6 +77,7 @@ export {
   certif3,
   certif4,
   certif5,
+  certif6,
   project2,
   project3,
   user1,
