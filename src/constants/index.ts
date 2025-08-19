@@ -391,7 +391,7 @@ export const CERTIFICATIONS = [
     date: "15 July 2025",
     description: "Formation axée sur les méthodologies et outils de développement logiciel à grande échelle : analyse des besoins, conception, implémentation, tests et maintenance. Approche pratique avec études de cas réels, combinant programmation orientée objet et méthodes agiles.",
     image: certif6,
-    certificate_link: "https://drive.google.com/file/your-new-certificate-link",
+    certificate_link: "https://drive.google.com/file/d/1vtdiSvkCHgdiJQId9qdWKv1EdOayJoNG/view?usp=sharing",
     tags: [
       {
         name: "Ingénierie logicielle",
