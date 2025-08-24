@@ -100,7 +100,7 @@ export const SERVICES = [
 // Technologies
 export const TECHNOLOGIES = [
   {
-    name: "HTML 5",
+    name: "HTML",
     icon: html,
   },
   {
