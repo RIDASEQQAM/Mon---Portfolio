@@ -73,7 +73,7 @@ export const NAV_LINKS = [
   {
     id: "Mon cv",
     title: "Mon cv",
-    link: "https://drive.google.com/file/d/1vOgSf6oQDnwgRJqILFY5mvGzEmvWKlMt/view?usp=sharing",  // You'll need to upload your CV and replace this link
+    link: "https://drive.google.com/file/d/1Rm7Y5FY7szbDnW4OKvotAT488LhVrGiN/view?usp=sharing",  // You'll need to upload your CV and replace this link
   },
 ] as const;
 
