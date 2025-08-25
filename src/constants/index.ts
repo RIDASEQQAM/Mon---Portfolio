@@ -289,25 +289,25 @@ export const PROJECTS = [
     live_site_link: "",
   },
   {
-    name: "E-commerce Website",
+    name: "Timesheet and Absence Management System",
     description:
-      "Site e-commerce développé avec React et Firebase, incluant authentification utilisateur, panier d'achat et paiement en ligne Stripe.",
+      "Ce projet est une application full-stack pour la gestion des feuilles de temps et des absences des employés. Elle se compose d’un backend en Java Spring Boot et d’un frontend en Angular.",
     tags: [
       {
-        name: "react",
+        name: "Angular",
         color: "blue-text-gradient",
       },
       {
-        name: "firebase",
+        name: "Java",
         color: "green-text-gradient",
       },
       {
-        name: "stripe",
+        name: "Spring Boot",
         color: "pink-text-gradient",
       },
     ],
     image: project3,
-    source_code_link: "https://github.com/RidaSeqqam/e-commerce",
+    source_code_link: "https://github.com/RIDASEQQAM/WorkSync---Timesheet-and-Absence-Management-System.git",
     live_site_link: "",
   }
 ] as const;
