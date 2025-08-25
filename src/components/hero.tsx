@@ -17,7 +17,7 @@ export const Hero = () => {
           {/* Main Text */}
           <div className="relative z-10">
             <h1 className={cn(styles.heroHeadText, "text-white")}>
-              <span className="text-[#915eff]">Salut, Je suis Rida</span>
+              Salut, Je suis <span className="text-[#915eff]">Rida</span>
             </h1>
             <p className={cn(styles.heroSubText, "mt-4 text-white-100")}>
               Ingénieur Full Stack et DevOps

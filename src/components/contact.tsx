@@ -202,7 +202,7 @@ export const Contact = () => {
                 id="message"
                 value={form.message}
                 onChange={handleChange}
-                placeholder="Salut Rida !"
+                placeholder=" Rida !"
                 title="Qu'est-ce que tu veux dire?"
                 disabled={loading}
                 aria-disabled={loading}
