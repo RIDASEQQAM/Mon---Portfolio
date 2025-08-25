@@ -37,7 +37,7 @@ import python from "./tech/python.png";
 
 import project1 from "./projects/project1.png";
 import project2 from "./projects/project2.png";
-import project3 from "./projects/projet3.png";
+import project3 from "./projects/project3.png";
 
 import user1 from "./testimonials/user1.png";
 
