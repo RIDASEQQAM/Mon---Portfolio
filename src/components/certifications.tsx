@@ -32,13 +32,9 @@ const CertificationCard = ({
       }}
       className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
     >
-      <div className="relative w-full h-[230px]">
+      <div className="relative w-full aspect-[16/9] sm:aspect-[16/9]">
         {/* Certificate image */}
-        <img
-          src={image}
-          alt={name}
-          className="w-full h-full object-cover rounded-2xl"
-        />
+  <img src={image} alt={name} className="w-full h-full object-cover rounded-2xl" />
 
         {/* Certificate Link */}
         <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
