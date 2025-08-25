@@ -180,7 +180,7 @@ export const Contact = () => {
                 id="email"
                 value={form.email}
                 onChange={handleChange}
-                placeholder="johndoe@email.com"
+                placeholder="nom.prenom@email.com"
                 title="Quel est ton e-mail?"
                 disabled={loading}
                 aria-disabled={loading}
