@@ -232,7 +232,7 @@ export const EXPERIENCES = [
 export const TESTIMONIALS = [
   {
     testimonial:
-      "Rida est un développeur passionné qui apporte une grande attention aux détails dans son travail. Son expertise en développement web moderne est remarquable.",
+      "Rida est un ingénieur Full Stack passionné, rigoureux et attentif aux détails. Sa maîtrise des technologies front-end et back-end et son engagement garantissent des projets fiables et de grande qualité.",
     name: "Orange Business",
     designation: "Manager",
     company: "Orange Business",
