@@ -23,14 +23,17 @@
     <meta name="author" content="RIDA SEQQAM" />
     <link rel="author" href="https://github.com/RidaSeqqam" />
 
-    <!-- Icon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.ico" sizes="any" />
-    <link rel="icon" href="/favicon16.png" type="image/png" sizes="16x16" />
-    <link rel="icon" href="/favicon32.png" type="image/png" sizes="32x32" />
+  <!-- Icon (served from `public/` at project root) -->
+  <!-- Primary: PNG icon (matches the "S" purple favicon in `public/favicon.png`) -->
+  <!-- Add a version query param to force browsers to refetch when updated -->
+  <link rel="icon" href="/favicon.png?v=2" type="image/png" sizes="32x32" />
+  <link rel="icon" href="/favicon16.png?v=2" type="image/png" sizes="16x16" />
+  <link rel="icon" href="/favicon32.png?v=2" type="image/png" sizes="32x32" />
+  <!-- Fallback for older browsers -->
+  <link rel="shortcut icon" href="/favicon.ico?v=2" />
     <link
       rel="apple-touch-icon"
-      href="/public/desktop_pc/apple-touch-icon.svg"
-      type="image/png"
+      href="/desktop_pc/apple-touch-icon.svg"
       sizes="180x180"
     />
 

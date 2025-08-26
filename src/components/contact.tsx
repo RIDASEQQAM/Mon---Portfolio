@@ -172,6 +172,7 @@ export const Contact = () => {
             ref={formRef}
             onSubmit={handleSubmit}
             className="mt-12 flex flex-col gap-8"
+            autoComplete="on"
           >
             {/* Name */}
             <label htmlFor="name" className="flex flex-col">
@@ -180,6 +181,7 @@ export const Contact = () => {
                 type="text"
                 name="name"
                 id="name"
+                autoComplete="name"
                 value={form.name}
                 onChange={handleChange}
                 placeholder={t("contact_name_placeholder")}
@@ -202,6 +204,7 @@ export const Contact = () => {
                 type="email"
                 name="email"
                 id="email"
+                autoComplete="email"
                 value={form.email}
                 onChange={handleChange}
                 placeholder={t("contact_email_placeholder")}
@@ -224,6 +227,7 @@ export const Contact = () => {
                 rows={7}
                 name="message"
                 id="message"
+                autoComplete="off"
                 value={form.message}
                 onChange={handleChange}
                 placeholder={t("contact_message_placeholder")}

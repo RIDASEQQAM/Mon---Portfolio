@@ -27,7 +27,12 @@ const CertificationCard = ({
   const { t } = useTranslation();
 
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.6, delay: index * 0.2 }}
+    >
       <Tilt
         options={{
           max: 45,
@@ -36,7 +41,7 @@ const CertificationCard = ({
         }}
         className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
       >
-        <div className="relative w-full aspect-[16/9] sm:aspect-[16/9]">
+  <div className="relative w-full h-[230px]">
           {/* Certificate image */}
           <img src={image} alt={name} className="w-full h-full object-cover rounded-2xl" />
 
@@ -56,19 +61,19 @@ const CertificationCard = ({
           </div>
         </div>
 
-        {/* Certificate Info */}
+        {/* Certificate Info (responsive sizes for mobile) */}
         <div className="mt-5">
-          <h3 className="text-white font-bold text-[24px]">{name}</h3>
-          <p className="mt-2 text-secondary text-[14px] italic">
+          <h3 className="text-white font-bold text-[20px] sm:text-[24px]">{name}</h3>
+          <p className="mt-2 text-secondary text-[12px] sm:text-[14px] italic">
             {issuer} • {t(date)}
           </p>
-          <p className="mt-2 text-secondary text-[14px]">{t(description)}</p>
+          <p className="mt-2 text-secondary text-[12px] sm:text-[14px]">{t(description)}</p>
         </div>
 
         {/* Certificate Tags */}
         <div className="mt-4 flex flex-wrap gap-2">
           {tags.map((tag, tagIdx) => (
-            <p key={`Tag-${tagIdx}`} className={cn(tag.color, "text-[14px]")}>
+            <p key={`Tag-${tagIdx}`} className={cn(tag.color, "text-[12px] sm:text-[14px]")}>
               #{t(tag.name)}
             </p>
           ))}
