@@ -263,7 +263,7 @@ export const PROJECTS = [
     ],
     image: project1,
     source_code_link: "https://github.com/RIDASEQQAM/Platform-de-gestion-des-clients-et-achats.git",
-    live_site_link: "",
+    live_site_link: "https://mon-portfolio-silk-omega.vercel.app/",
   },
   {
     name: "Portfolio Personnel",
