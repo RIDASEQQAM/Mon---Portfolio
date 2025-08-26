@@ -114,10 +114,10 @@ export const Navbar = ({ hide }: NavbarProps) => {
                       target="_blank"
                       rel="noreferrer noopener"
                     >
-                      {link.title}
+                      {t(link.title)}
                     </a>
                   ) : (
-                    <a href={`#${link.id}`}>{link.title}</a>
+                    <a href={`#${link.id}`}>{t(link.title)}</a>
                   )}
                 </li>
               ))}

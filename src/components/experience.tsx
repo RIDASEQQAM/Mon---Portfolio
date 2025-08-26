@@ -44,7 +44,7 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
     <div>
       <h3 className="text-white text-[24px] font-bold">{t(experience.title)}</h3>
       <p
-        className="text-secondary text-[16px] font-semibold"
+        className="text-secondary text-[16px] font-semibold orange-text-gradient"
         style={{ margin: 0 }}
       >
         {t(experience.company_name)}

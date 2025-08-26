@@ -77,7 +77,7 @@ const TRANSLATIONS: Record<string, Record<string, string>> = {
     testimonials_sub: "What others say",
     testimonials_title: "Testimonials.",
     testimonial_orange:
-      "Rida is a passionate Full Stack engineer rigorous, detail oriented with strong front-end and back-end skills, committed to delivering high-quality, reliable projects.",
+      "Rida is a passionate Full Stack engineer rigorous, detail oriented with strong front-end and back-end skills, committed to delivering high quality, reliable projects.",
 
   // Experiences
   experience_sub: "WHAT I'VE DONE SO FAR",

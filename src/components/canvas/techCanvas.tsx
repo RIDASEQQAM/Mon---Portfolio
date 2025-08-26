@@ -124,8 +124,8 @@ const TechCanvas = ({ techs, columns = 5 }: TechCanvasProps) => {
         <Suspense fallback={<CanvasLoader />}>
           <ambientLight intensity={0.25} />
           <directionalLight position={[0, 0, 0.05]} intensity={0.5} />
-          {/* enable zoom so mobile pinch-to-zoom works; allow rotate by touch */}
-          <OrbitControls enableZoom={true} enablePan={false} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2} />
+          {/* disable zoom so page scrolling doesn't zoom the scene; allow rotate by drag if desired */}
+          <OrbitControls enableZoom={false} enablePan={false} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2} />
           {techs.map((t, i) => (
             <TechSphere
               key={t.name}

@@ -29,6 +29,12 @@
   padding-bottom: 100px;
   display: block;
 }
+@media (max-width: 640px) {
+  .hash-span {
+    margin-top: -64px;
+    padding-bottom: 64px;
+  }
+}
 
 .black-gradient {
   background: #000000; /* fallback for old browsers */
