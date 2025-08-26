@@ -1,16 +1,16 @@
-# Pull Request Template
+# Pull Request Guide
 
 <!--
-PR description.
+Provide a clear description of your PR here.
 -->
 
-Please make sure the below checklist is followed for Pull Requests.
+Before submitting, please verify the following checklist:
 
-- [ ] [All continuous integration tests] are green.
-- [ ] Tests are added where necessary.
-- [ ] The Readme.md is updated if necessary.
-- [ ] [3d-portfolio wiki] is updated if necessary.
-- [ ] Documentation is added/updated where necessary.
-- [ ] Coding Rules & Commit Guidelines as per our [CONTRIBUTING.md document] are followed.
-- [ ] Please also reference the issue number in a commit message to [automatically close the related GitHub issue].
-- [ ] It is also possible to add `[skip ci]` or `[ci skip]` to your commit message to skip continuous integration tests.
+- [ ] All CI/CD pipelines pass successfully.  
+- [ ] New tests have been created when required.  
+- [ ] The `README.md` has been updated if applicable.  
+- [ ] The project wiki (`3d-portfolio`) is updated when needed.  
+- [ ] Relevant documentation has been added or modified.  
+- [ ] Code style and commit conventions described in [CONTRIBUTING.md] are respected.  
+- [ ] Reference the related issue in at least one commit to enable automatic issue closing.  
+- [ ] Use `[skip ci]` or `[ci skip]` in your commit message if you want to bypass CI checks.  
