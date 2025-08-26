@@ -7,6 +7,7 @@ import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
 import { cn } from "../utils/lib";
 import { fadeIn, textVariant } from "../utils/motion";
+import { useTranslation } from "../i18n";
 
 type ProjectCardProps = (typeof PROJECTS)[number] & {
   index: number;
@@ -90,13 +91,15 @@ const ProjectCard = ({
 
 // Works
 export const Works = () => {
+  const { t } = useTranslation();
+
   return (
     <SectionWrapper idName="projects">
       <>
         {/* Title */}
         <motion.div variants={textVariant()}>
-          <p className={styles.sectionSubText}>My Work</p>
-          <h2 className={styles.sectionHeadText}>Projects.</h2>
+          <p className={styles.sectionSubText}>{t("projects_sub")}</p>
+          <h2 className={styles.sectionHeadText}>{t("projects_title")}</h2>
         </motion.div>
 
         {/* About */}
@@ -105,7 +108,7 @@ export const Works = () => {
             variants={fadeIn("", "", 0.1, 1)}
             className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
           >
-            Les projets suivants mettent en valeur mes compétences et mon expérience à travers des exemples concrets de mon travail. Chaque projet est brièvement décrit avec des liens vers des référentiels de code et des démos en direct. Cela reflète ma capacité à résoudre des problèmes complexes, à travailler avec différentes technologies et à gérer des projets efficacement.
+            {t("projects_desc")}
           </motion.p>
         </div>
 

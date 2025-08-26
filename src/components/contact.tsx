@@ -5,6 +5,7 @@ import { toast } from "sonner";
 
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
+import { useTranslation } from "../i18n";
 import { styles } from "../styles";
 import { slideIn } from "../utils/motion";
 
@@ -22,13 +23,19 @@ export const Contact = () => {
     message: "",
   });
   const [loading, setLoading] = useState(false);
+  const { t } = useTranslation();
+
+  // Are EmailJS env vars present at build/runtime?
+  const emailConfigured = Boolean(
+    EMAILJS_PUBLIC_KEY && EMAILJS_SERVICE_ID && EMAILJS_TEMPLATE_ID,
+  );
 
   // Initialize EmailJS
   useEffect(() => {
     if (EMAILJS_PUBLIC_KEY) {
       emailjs.init(EMAILJS_PUBLIC_KEY);
     }
-  }, []);
+  }, [EMAILJS_PUBLIC_KEY]);
 
   // handle form change
   const handleChange = (
@@ -97,6 +104,14 @@ export const Contact = () => {
     // prevent default page reload
     e.preventDefault();
 
+    // Guard: if EmailJS is not configured in this build, stop and inform user
+    if (!emailConfigured) {
+      toast.error(
+        "Contact is unavailable: missing EmailJS configuration in this build. Please set VITE_EMAILJS_* env vars and redeploy.",
+      );
+      return false;
+    }
+
     // validate form
     if (!validateForm()) return false;
 
@@ -140,8 +155,17 @@ export const Contact = () => {
           className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
         >
           {/* Title */}
-          <p className={styles.sectionSubText}>Prendre contact</p>
-          <h3 className={styles.sectionHeadText}>Contact.</h3>
+          <p className={styles.sectionSubText}>{useTranslation().t("contact_sub")}</p>
+          <h3 className={styles.sectionHeadText}>{t("contact_title")}</h3>
+
+          {/* Informational banner when EmailJS keys are missing in the build */}
+          {!emailConfigured && (
+            <div className="mt-4 p-3 rounded-md bg-yellow-600/20 text-yellow-300 text-sm">
+              Contact form is disabled in this build — missing EmailJS keys. It works locally when you add
+              VITE_EMAILJS_PUBLIC_KEY, VITE_EMAILJS_SERVICE_ID and VITE_EMAILJS_TEMPLATE_ID to your
+              environment and rebuild.
+            </div>
+          )}
 
           {/* Form */}
           <form
@@ -151,15 +175,15 @@ export const Contact = () => {
           >
             {/* Name */}
             <label htmlFor="name" className="flex flex-col">
-              <span className="text-white font-medium mb-4">Votre Nom*</span>
+              <span className="text-white font-medium mb-4">{t("contact_name_label")}</span>
               <input
                 type="text"
                 name="name"
                 id="name"
                 value={form.name}
                 onChange={handleChange}
-                placeholder="Rida"
-                title="Quel est ton nom?"
+                placeholder={t("contact_name_placeholder")}
+                title={t("contact_name_label")}
                 disabled={loading}
                 aria-disabled={loading ? "true" : "false"}
                 className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium disabled:bg-tertiary/20 disabled:text-white/60"
@@ -167,21 +191,21 @@ export const Contact = () => {
 
               {/* Invalid Name */}
               <span className="text-red-400 mt-2 hidden" id="name-error">
-                Nom incorrect!
+                {t("contact_name_error")}
               </span>
             </label>
 
             {/* Email */}
             <label htmlFor="email" className="flex flex-col">
-              <span className="text-white font-medium mb-4">Votre Email*</span>
+              <span className="text-white font-medium mb-4">{t("contact_email_label")}</span>
               <input
                 type="email"
                 name="email"
                 id="email"
                 value={form.email}
                 onChange={handleChange}
-                placeholder="nom.prenom@email.com"
-                title="Quel est ton e-mail?"
+                placeholder={t("contact_email_placeholder")}
+                title={t("contact_email_label")}
                 disabled={loading}
                 aria-disabled={loading}
                 className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium disabled:bg-tertiary/20 disabled:text-white/60"
@@ -189,21 +213,21 @@ export const Contact = () => {
 
               {/* Invalid Email */}
               <span className="text-red-400 mt-2 hidden" id="email-error">
-                Invalid E-mail!
+                {t("contact_email_error")}
               </span>
             </label>
 
             {/* Message */}
             <label htmlFor="message" className="flex flex-col">
-              <span className="text-white font-medium mb-4">Votre Message*</span>
+              <span className="text-white font-medium mb-4">{t("contact_message_label")}</span>
               <textarea
                 rows={7}
                 name="message"
                 id="message"
                 value={form.message}
                 onChange={handleChange}
-                placeholder=" Rida !"
-                title="Qu'est-ce que tu veux dire?"
+                placeholder={t("contact_message_placeholder")}
+                title={t("contact_message_label")}
                 disabled={loading}
                 aria-disabled={loading}
                 className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium disabled:bg-tertiary/20 disabled:text-white/60 disabled:resize-none"
@@ -211,20 +235,20 @@ export const Contact = () => {
 
               {/* Invalid Message */}
               <span className="text-red-400 mt-2 hidden" id="message-error">
-                Invalid Message!
+                {t("contact_message_error")}
               </span>
             </label>
 
             {/* Submit */}
             <button
               type="submit"
-              title={loading ? "Sending..." : "Envoyer"}
+              title={loading ? t("contact_sending") : t("contact_send")}
               className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl disabled:bg-tertiary/20 disabled:text-white/60"
               disabled={loading}
               aria-disabled={loading}
             >
               {/* check loader state */}
-              {loading ? "Envoi en cours..." : "Envoyer"}
+              {loading ? t("contact_sending") : t("contact_send")}
             </button>
           </form>
         </motion.div>

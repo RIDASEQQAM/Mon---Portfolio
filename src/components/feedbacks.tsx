@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 
 import { TESTIMONIALS } from "../constants";
+import { useTranslation } from "../i18n";
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
 import { cn } from "../utils/lib";
@@ -59,6 +60,7 @@ const FeedbackCard = ({
 
 // Feedbacks
 export const Feedbacks = () => {
+  const { t } = useTranslation();
   return (
     <SectionWrapper>
       <div className="mt-12 bg-black-100 rounded-[20px]">
@@ -70,8 +72,8 @@ export const Feedbacks = () => {
         >
           {/* Title */}
           <motion.div variants={textVariant()}>
-            <p className={styles.sectionSubText}>Ce que les autres disent</p>
-            <h2 className={styles.sectionHeadText}>Témoignages.</h2>
+            <p className={styles.sectionSubText}>{t("testimonials_sub")}</p>
+            <h2 className={styles.sectionHeadText}>{t("testimonials_title")}</h2>
           </motion.div>
         </div>
 
@@ -80,7 +82,14 @@ export const Feedbacks = () => {
           className={cn(styles.paddingX, "-mt-20 pb-14 flex flex-wrap gap-7")}
         >
           {TESTIMONIALS.map((testimonial, i) => (
-            <FeedbackCard key={testimonial.name} index={i} {...testimonial} />
+            <FeedbackCard
+              key={testimonial.name}
+              index={i}
+              {...{
+                ...testimonial,
+                testimonial: t("testimonial_orange"),
+              }}
+            />
           ))}
         </div>
       </div>

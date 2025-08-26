@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { cn } from "../utils/lib";
+import { useTranslation } from "../i18n";
 
 // Hero
 export const Hero = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="relative w-full h-screen mx-auto flex items-center justify-center">
       <div className={cn(styles.paddingX, "max-w-7xl w-full")}>
@@ -17,10 +20,10 @@ export const Hero = () => {
           {/* Main Text */}
           <div className="relative z-10">
             <h1 className={cn(styles.heroHeadText, "text-white")}>
-              Salut, Je suis <span className="text-[#915eff]">Rida</span>
+              {t("hero_greeting")} <span className="text-[#915eff]">Rida</span>
             </h1>
             <p className={cn(styles.heroSubText, "mt-4 text-white-100")}>
-              Ingénieur Full Stack et DevOps
+              {t("hero_title")}
             </p>
           </div>
         </div>

@@ -47,32 +47,32 @@ import {
 export const NAV_LINKS = [
   {
     id: "about",
-    title: "À propos de moi",
+  title: "nav_about",
     link: null,
   },
   {
     id: "work",
-    title: "Experience",
+  title: "nav_experience",
     link: null,
   },
   {
     id: "projects",
-    title: "Projects",
+  title: "nav_projects",
     link: null,
   },
   {
     id: "certifications",
-    title: "Certifications",
+  title: "nav_certifications",
     link: null,
   },
   {
     id: "contact",
-    title: "Contact",
+  title: "nav_contact",
     link: null,
   },
   {
     id: "Mon cv",
-    title: "Mon cv",
+  title: "nav_cv",
     link: "https://drive.google.com/file/d/1Rm7Y5FY7szbDnW4OKvotAT488LhVrGiN/view?usp=sharing",  // You'll need to upload your CV and replace this link
   },
 ] as const;
@@ -184,44 +184,43 @@ export const TECHNOLOGIES = [
 // Experiences
 export const EXPERIENCES = [
   {
-    title: "Stage PFE – Développeur Full Stack",
-    company_name: "ORANGE BUSINESS ",
+    title: "exp_orange_title",
+    company_name: "exp_orange_company",
     icon: orange,
     iconBg: "#fff",
-    date: "Mars 2025 -  Août 2025",
+    date: "exp_orange_date",
     points: [
-      "Développement de l’application web InternFlow en Java (Spring Boot) et Angular, selon une architecture software établie",
-      "Mise en place de l’authentification sécurisée et du contrôle d’accès par rôle via Spring Security et JWT",
-      "Conception de dashboards dynamiques, filtres temps réel, et tests unitaires/intégrationavec JUnit/Mockito",
-      "Intégration de microservices IA (Python + LLMs) pour le parsing et la recommandationintelligente de CV",
-      "Conception d’API REST, avec communication fluide et gestion robuste des erreurs",
-      "Participation à un projet en méthodologie Agile (Scrum) avec Jira(User Stories),DevOps Boards, et collaboration d’équipe"
+      "exp_orange_p1",
+      "exp_orange_p2",
+      "exp_orange_p3",
+      "exp_orange_p4",
+      "exp_orange_p5",
+      "exp_orange_p6",
     ],
   },
   {
-    title: "Stage développeur Full Stack",
-    company_name: "BOUYGUES CONSTRUCTION IT",
+    title: "exp_bouygues_title",
+    company_name: "exp_bouygues_company",
     icon: bouygues,
     iconBg: "#fff",
-    date: "Juillet 2024 - Aôut 2024",
+    date: "exp_bouygues_date",
     points: [
-      "Développement d’une plateforme d’administration système en Spring Boot et Angular, selon une architecture software établie",
-      "Intégration d’un système d’authentification sécurisé avec Spring Security et Angular Identity (base SQL Server)",
-      "Automatisation des opérations système critiques telles que le démarrage/redémarrage des services via des scripts back-end en Java et PowerShell, réduisant de plus de 30 % les interventions manuelles des équipes IT",
-      "Collaboration avec les administrateurs système et les équipes DevOps afin d’alignerl’application sur les standards d’infrastructure internes et les pipelines de déploiement.",
+      "exp_bouygues_p1",
+      "exp_bouygues_p2",
+      "exp_bouygues_p3",
+      "exp_bouygues_p4",
     ],
   },
     {
-    title: "Stage en Cybersécurité ",
-    company_name: "DATAPROTECT",
+    title: "exp_dataprot_title",
+    company_name: "exp_dataprot_company",
     icon: dataprotect,
     iconBg: "#fff",
-    date: "Juillet 2023 - Aôut 2023",
+    date: "exp_dataprot_date",
     points: [
-      "Développement et déploiement d’une solution de protection des terminaux basée sur les technologies Kaspersky et EDR (Endpoint Detection and Response) pour sécuriser les infrastructures informatiques critiques contre les cybermenaces",
-      "Participation à la réponse aux incidents de cybersécurité, incluant la surveillance en temps réel, l’analyse des menaces et la mise en œuvre de plans de reprise après sinistre",
-      "temps réel, l’analyse des menaces et la mise en œuvre de plans de reprise après sinistre . Réalisation d’audits de sécurité et d’évaluations de vulnérabilités sur les réseaux et les systèmes, renforçant la protection des données sensibles et confidentielles",
-      "Acquisition d’une expérience pratique avec des outils de sécurité de niveau entreprise et contribution à la documentation des procédures de sécurité et des stratégies de remédiation.",
+      "exp_dataprot_p1",
+      "exp_dataprot_p2",
+      "exp_dataprot_p3",
     ],
   },
 
@@ -317,17 +316,17 @@ export const CERTIFICATIONS = [
   {
     name: "Oracle Certified Professional Java SE 17 Developer",
     issuer: "Oracle",
-    date: "5 December 2024",
-    description: "Maîtrise avancée du langage Java, des API clés et des fonctionnalités modernes de Java SE 17, avec la capacité de concevoir et maintenir des applications robustes, sécurisées et performantes",
+    date: "cert_oracle_date",
+    description: "cert_oracle_desc",
     image: certif1,
     certificate_link: "https://drive.google.com/file/d/1fmCkh1cDH48pfpmPwGUZO-AuXWptMqUL/view?usp=sharing",
     tags: [
       {
-        name: "Java SE 17",
+  name: "tag_java_se_17",
         color: "blue-text-gradient",
       },
       {
-        name: "Développement avancé",
+  name: "tag_advanced_development",
         color: "green-text-gradient",
       }
     ],
@@ -335,21 +334,21 @@ export const CERTIFICATIONS = [
   {
     name: "Building Scalable Java Microservices with Spring Boot and Spring Cloud",
     issuer: "Google Cloud",
-    date: "13 December 2024",
-    description: "Compétences avancées en développement de microservices Java, incluant la conception d’architectures distribuées, la scalabilité avec Spring Boot et Spring Cloud, ainsi que l’intégration avec des services cloud pour des applications robustes et performantes.",
+    date: "cert_google_date",
+    description: "cert_google_desc",
     image: certif2,
     certificate_link: "https://drive.google.com/file/d/1raNUrBpb5JKK4xgpqkzw1dIfWlWiwAB1/view?usp=sharing",
     tags: [
       {
-        name: "Spring Boot",
+  name: "tag_spring_boot",
         color: "blue-text-gradient",
       },
       {
-        name: "Spring Cloud",
+  name: "tag_spring_cloud",
         color: "green-text-gradient",
       },
       {
-        name: "Google Cloud",
+  name: "tag_google_cloud",
         color: "pink-text-gradient",
       }
     ],
@@ -357,21 +356,21 @@ export const CERTIFICATIONS = [
   {
     name: "Introduction to Big Data with Spark and Hadoop",
     issuer: "IBM",
-    date: "13 December 2024",
-    description: "Compétences fondamentales en Big Data, incluant le traitement distribué, l’analyse de données à grande échelle et l’optimisation des performances. Capacité à concevoir et mettre en œuvre des solutions Big Data fiables et évolutives.",
+    date: "cert_ibm_date",
+    description: "cert_ibm_desc",
     image: certif3,
     certificate_link: "https://drive.google.com/file/d/1kcPDlZi6ExIdotPnOuyb_huEi9Fq5jSv/view?usp=sharing",
     tags: [
       {
-        name: "Spark",
+  name: "tag_spark",
         color: "blue-text-gradient",
       },
       {
-        name: "Hadoop",
+  name: "tag_hadoop",
         color: "green-text-gradient",
       },
       {
-        name: "Big Data",
+  name: "tag_big_data",
         color: "pink-text-gradient",
       }
     ],
@@ -379,21 +378,21 @@ export const CERTIFICATIONS = [
   {
     name: "React Native",
     issuer: "Meta",
-    date: "10 Mai 2024",
-    description: "Compétences avancées en développer des compétences pratiques en création d’applications mobiles multiplateformes. J’y ai appris à concevoir des interfaces utilisateur modernes et performantes, à intégrer des API et à gérer l’état des applications. Cette formation atteste de ma capacité à développer des applications mobiles complètes avec React Native, tout en respectant les bonnes pratiques de développement mobile.",
+    date: "cert_meta_date",
+    description: "cert_meta_desc",
     image: certif4,
     certificate_link: "https://drive.google.com/file/d/1vurYZhsfSQkbhnEliKs_oYTtZe03pdv-/view?usp=sharing",
     tags: [
       {
-        name: "React Native",
+  name: "tag_react_native",
         color: "blue-text-gradient",
       },
       {
-        name: "Intégration d’API",
+  name: "tag_api_integration",
         color: "green-text-gradient",
       },
       {
-        name: "Développement mobile",
+  name: "tag_mobile_development",
         color: "pink-text-gradient",
       }
     ],
@@ -401,21 +400,21 @@ export const CERTIFICATIONS = [
   {
     name: "Python for Everybody",
     issuer: "University of Michigan",
-    date: "30 Mai 2024",
-    description: "acquérir une solide maîtrise des bases de la programmation en Python, incluant la manipulation des structures de données, l’extraction et le traitement d’informations à partir du web et l’utilisation de bases de données relationnelles. Elle atteste de mes compétences pratiques en développement Python et en analyse de données.",
+    date: "cert_umich_date",
+    description: "cert_umich_desc",
     image: certif5,
     certificate_link: "https://drive.google.com/file/d/1pfD8cR-5cOc0dOz69qjHqVRIOUShPQEz/view?usp=sharing",
     tags: [
       {
-        name: "Python",
+  name: "tag_python",
         color: "blue-text-gradient",
       },
       {
-        name: "Structures de données",
+  name: "tag_data_structures",
         color: "green-text-gradient",
       },
       {
-        name: "SQL",
+  name: "tag_sql",
         color: "pink-text-gradient",
       }
     ],
@@ -423,21 +422,21 @@ export const CERTIFICATIONS = [
   {
     name: "Software Engineering",
     issuer: "The University of Hong Kong",
-    date: "15 July 2025",
-    description: "Formation axée sur les méthodologies et outils de développement logiciel à grande échelle : analyse des besoins, conception, implémentation, tests et maintenance. Approche pratique avec études de cas réels, combinant programmation orientée objet et méthodes agiles.",
+    date: "cert_hku_date",
+    description: "cert_hku_desc",
     image: certif6,
     certificate_link: "https://drive.google.com/file/d/1vtdiSvkCHgdiJQId9qdWKv1EdOayJoNG/view?usp=sharing",
     tags: [
       {
-        name: "Ingénierie logicielle",
+  name: "tag_software_engineering",
         color: "blue-text-gradient",
       },
       {
-        name: "POO",
+  name: "tag_oop",
         color: "green-text-gradient",
       },
       {
-        name: "Méthodologies agiles",
+  name: "tag_agile_methods",
         color: "pink-text-gradient",
       }
     ],

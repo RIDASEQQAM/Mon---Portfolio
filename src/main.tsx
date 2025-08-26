@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import { Toaster } from "sonner";
 
 import App from "./app";
+import { I18nProvider } from "./i18n";
 
 import "./index.css";
 
@@ -19,6 +20,8 @@ ReactDOM.createRoot(rootEl!).render(
         style: { background: "#050816", opacity: 0.95 },
       }}
     />
-    <App />
+    <I18nProvider>
+      <App />
+    </I18nProvider>
   </React.StrictMode>,
 );

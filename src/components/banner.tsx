@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import { close, bulb } from "../assets";
+import { useTranslation } from "../i18n";
 
 type BannerProps = {
   hide: boolean;
@@ -28,6 +29,8 @@ const Banner = ({ hide, setHide }: BannerProps) => {
     localStorage.setItem(BANNER_KEY, "1");
   };
 
+  const { t } = useTranslation();
+
   return (
     <div
       id="sticky-banner"
@@ -48,9 +51,7 @@ const Banner = ({ hide, setHide }: BannerProps) => {
             />
             <span className="sr-only">Light bulb</span>
           </span>
-          <span>
-           Merci Pour Votre Visite .
-          </span>
+          <span>{t("banner_thanks")}</span>
         </p>
       </div>
       <div className="flex items-center">

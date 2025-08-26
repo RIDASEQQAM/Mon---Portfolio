@@ -5,6 +5,7 @@ import { SERVICES } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
 import { fadeIn, textVariant } from "../utils/motion";
+import { useTranslation } from "../i18n";
 
 type ServiceCardProps = {
   index: number;
@@ -63,6 +64,8 @@ const ServiceList = ({ services }: { services: typeof SERVICES }) => {
 
 // About
 export const About = () => {
+  const { t } = useTranslation();
+
   return (
     <SectionWrapper idName="about">
       <>
@@ -73,8 +76,8 @@ export const About = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          <p className={styles.sectionSubText}>Introduction</p>
-          <h2 className={styles.sectionHeadText}>Aperçu.</h2>
+          <p className={styles.sectionSubText}>{t("about_sub")}</p>
+          <h2 className={styles.sectionHeadText}>{t("about_title")}</h2>
         </motion.div>
 
         {/* Body */}
@@ -85,10 +88,7 @@ export const About = () => {
           viewport={{ once: true, amount: 0.25 }}
           className="empty-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          Je suis un Développeur Full Stack Junior passionné par la création d'applications web modernes et performantes.
-          Fort d'une formation solide en développement Full Stack et d'une expérience pratique acquise à travers divers projets,
-          je maîtrise les technologies front-end et back-end. Je suis constamment à la recherche de nouvelles opportunités
-          pour apprendre et grandir dans le domaine du développement Full Stack.
+          {t("about_text")}
         </motion.p>
 
         {/* Service Cards */}

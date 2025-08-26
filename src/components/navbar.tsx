@@ -5,6 +5,7 @@ import { logo, menu, close } from "../assets";
 import { NAV_LINKS } from "../constants";
 import { styles } from "../styles";
 import { cn } from "../utils/lib";
+import { useTranslation } from "../i18n";
 
 type NavbarProps = {
   hide: boolean;
@@ -16,6 +17,7 @@ export const Navbar = ({ hide }: NavbarProps) => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [isAtBottom, setIsAtBottom] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -51,7 +53,7 @@ export const Navbar = ({ hide }: NavbarProps) => {
         >
           <img src={logo} alt="Logo" className="w-9 h-9 object-contain" />
           <p className="text-white text-[18px] font-bold cursor-pointer flex">
-            <span className="sm:block hidden">SEQQAM | Ingénieur logiciel</span>
+            <span className="sm:block hidden">{t("navbar_subtitle")}</span>
           </p>
         </Link>
 
@@ -68,10 +70,10 @@ export const Navbar = ({ hide }: NavbarProps) => {
             >
               {link.link ? (
                 <a href={link.link} target="_blank" rel="noreferrer noopener">
-                  {link.title}
+                  {t(link.title)}
                 </a>
               ) : (
-                <a href={`#${link.id}`}>{link.title}</a>
+                <a href={`#${link.id}`}>{t(link.title)}</a>
               )}
             </li>
           ))}
