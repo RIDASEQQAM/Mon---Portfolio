@@ -56,7 +56,7 @@
     "react-vertical-timeline-component": "^3.6.0",
     "sonner": "^1.4.2",
     "tailwind-merge": "^2.2.1",
-    "three": "^0.161.0"
+    "three": "^0.180.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^28.0.6",
@@ -65,7 +65,7 @@
     "@types/react-dom": "^18.2.19",
     "@types/react-vertical-timeline-component": "^3.3.6",
     "@types/tailwindcss": "^3.1.0",
-    "@types/three": "^0.179.0",
+    "@types/three": "^0.180.0",
     "@vitejs/plugin-react": "^4.0.3",
     "@vitest/ui": "^3.2.4",
     "autoprefixer": "^10.4.21",
